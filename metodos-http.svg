@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a23"/>
+      <stop offset="100%" style="stop-color:#1b1b3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" rx="16" fill="url(#bg2)"/>
+  <text x="300" y="40" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="20" font-weight="bold">Métodos HTTP en APIs REST</text>
+  <!-- GET -->
+  <rect x="30" y="65" width="120" height="100" rx="10" fill="#0d7377" opacity="0.9"/>
+  <text x="90" y="95" text-anchor="middle" fill="#00fff5" font-family="Courier New, monospace" font-size="22" font-weight="bold">GET</text>
+  <text x="90" y="118" text-anchor="middle" fill="#c0f0f0" font-family="Segoe UI, sans-serif" font-size="11">Obtener</text>
+  <text x="90" y="133" text-anchor="middle" fill="#c0f0f0" font-family="Segoe UI, sans-serif" font-size="11">datos</text>
+  <text x="90" y="155" text-anchor="middle" fill="#00fff5" font-family="Segoe UI, sans-serif" font-size="9">📖 Leer info</text>
+  <!-- POST -->
+  <rect x="165" y="65" width="120" height="100" rx="10" fill="#1b5e20" opacity="0.9"/>
+  <text x="225" y="95" text-anchor="middle" fill="#69f0ae" font-family="Courier New, monospace" font-size="22" font-weight="bold">POST</text>
+  <text x="225" y="118" text-anchor="middle" fill="#c8f5d0" font-family="Segoe UI, sans-serif" font-size="11">Crear</text>
+  <text x="225" y="133" text-anchor="middle" fill="#c8f5d0" font-family="Segoe UI, sans-serif" font-size="11">recursos</text>
+  <text x="225" y="155" text-anchor="middle" fill="#69f0ae" font-family="Segoe UI, sans-serif" font-size="9">➕ Añadir nuevo</text>
+  <!-- PUT -->
+  <rect x="300" y="65" width="120" height="100" rx="10" fill="#e65100" opacity="0.8"/>
+  <text x="360" y="95" text-anchor="middle" fill="#ffcc80" font-family="Courier New, monospace" font-size="22" font-weight="bold">PUT</text>
+  <text x="360" y="118" text-anchor="middle" fill="#ffe0b2" font-family="Segoe UI, sans-serif" font-size="11">Actualizar</text>
+  <text x="360" y="133" text-anchor="middle" fill="#ffe0b2" font-family="Segoe UI, sans-serif" font-size="11">completo</text>
+  <text x="360" y="155" text-anchor="middle" fill="#ffcc80" font-family="Segoe UI, sans-serif" font-size="9">✏️ Reemplazar</text>
+  <!-- DELETE -->
+  <rect x="435" y="65" width="130" height="100" rx="10" fill="#b71c1c" opacity="0.8"/>
+  <text x="500" y="95" text-anchor="middle" fill="#ef9a9a" font-family="Courier New, monospace" font-size="22" font-weight="bold">DELETE</text>
+  <text x="500" y="118" text-anchor="middle" fill="#ffcdd2" font-family="Segoe UI, sans-serif" font-size="11">Eliminar</text>
+  <text x="500" y="133" text-anchor="middle" fill="#ffcdd2" font-family="Segoe UI, sans-serif" font-size="11">recursos</text>
+  <text x="500" y="155" text-anchor="middle" fill="#ef9a9a" font-family="Segoe UI, sans-serif" font-size="9">🗑️ Borrar</text>
+  <!-- Ejemplo URL -->
+  <rect x="30" y="185" width="535" height="55" rx="8" fill="#12122a" stroke="#444" stroke-width="1"/>
+  <text x="50" y="207" fill="#888" font-family="Segoe UI, sans-serif" font-size="11">Ejemplo de endpoint:</text>
+  <text x="50" y="228" fill="#00fff5" font-family="Courier New, monospace" font-size="14">GET  https://api.ejemplo.com/usuarios/42</text>
+  <!-- Respuesta -->
+  <rect x="30" y="252" width="535" height="55" rx="8" fill="#12122a" stroke="#444" stroke-width="1"/>
+  <text x="50" y="272" fill="#888" font-family="Segoe UI, sans-serif" font-size="11">Respuesta JSON:</text>
+  <text x="50" y="295" fill="#69f0ae" font-family="Courier New, monospace" font-size="13">{ "id": 42, "nombre": "Ana", "rol": "developer" }</text>
+</svg>

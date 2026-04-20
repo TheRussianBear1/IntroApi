@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2027"/>
+      <stop offset="50%" style="stop-color:#203a43"/>
+      <stop offset="100%" style="stop-color:#2c5364"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="600" height="300" rx="16" fill="url(#g1)"/>
+  <!-- Cliente -->
+  <rect x="40" y="90" width="140" height="120" rx="12" fill="#1a1a2e" stroke="#e94560" stroke-width="2" filter="url(#shadow)"/>
+  <text x="110" y="135" text-anchor="middle" fill="#e94560" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">CLIENTE</text>
+  <text x="110" y="158" text-anchor="middle" fill="#ccc" font-family="Segoe UI, sans-serif" font-size="11">Navegador</text>
+  <text x="110" y="175" text-anchor="middle" fill="#ccc" font-family="Segoe UI, sans-serif" font-size="11">App Móvil</text>
+  <rect x="65" y="185" width="90" height="12" rx="3" fill="#e94560" opacity="0.3"/>
+  <rect x="65" y="185" width="55" height="12" rx="3" fill="#e94560"/>
+  <!-- Flechas -->
+  <line x1="185" y1="135" x2="225" y2="135" stroke="#00d2ff" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="225,130 235,135 225,140" fill="#00d2ff"/>
+  <text x="210" y="125" text-anchor="middle" fill="#00d2ff" font-family="Segoe UI, sans-serif" font-size="9">REQUEST</text>
+  <line x1="235" y1="170" x2="185" y2="170" stroke="#0cebeb" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="185,165 175,170 185,175" fill="#0cebeb"/>
+  <text x="210" y="190" text-anchor="middle" fill="#0cebeb" font-family="Segoe UI, sans-serif" font-size="9">RESPONSE</text>
+  <!-- API -->
+  <rect x="235" y="75" width="130" height="150" rx="12" fill="#16213e" stroke="#00d2ff" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="300" y="110" text-anchor="middle" fill="#00d2ff" font-family="Segoe UI, sans-serif" font-size="22" font-weight="bold">API</text>
+  <text x="300" y="135" text-anchor="middle" fill="#aaa" font-family="Segoe UI, sans-serif" font-size="10">Interfaz de</text>
+  <text x="300" y="150" text-anchor="middle" fill="#aaa" font-family="Segoe UI, sans-serif" font-size="10">Programación</text>
+  <text x="300" y="165" text-anchor="middle" fill="#aaa" font-family="Segoe UI, sans-serif" font-size="10">de Aplicaciones</text>
+  <rect x="260" y="180" width="80" height="25" rx="5" fill="#00d2ff" opacity="0.15" stroke="#00d2ff" stroke-width="1"/>
+  <text x="300" y="197" text-anchor="middle" fill="#00d2ff" font-family="Segoe UI, sans-serif" font-size="10">REST / JSON</text>
+  <!-- Flechas derecha -->
+  <line x1="370" y1="135" x2="410" y2="135" stroke="#f7971e" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="410,130 420,135 410,140" fill="#f7971e"/>
+  <text x="395" y="125" text-anchor="middle" fill="#f7971e" font-family="Segoe UI, sans-serif" font-size="9">QUERY</text>
+  <line x1="420" y1="170" x2="370" y2="170" stroke="#ffd200" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="370,165 360,170 370,175" fill="#ffd200"/>
+  <text x="395" y="190" text-anchor="middle" fill="#ffd200" font-family="Segoe UI, sans-serif" font-size="9">DATA</text>
+  <!-- Servidor -->
+  <rect x="420" y="90" width="140" height="120" rx="12" fill="#1a1a2e" stroke="#f7971e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="135" text-anchor="middle" fill="#f7971e" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold">SERVIDOR</text>
+  <text x="490" y="158" text-anchor="middle" fill="#ccc" font-family="Segoe UI, sans-serif" font-size="11">Base de Datos</text>
+  <text x="490" y="175" text-anchor="middle" fill="#ccc" font-family="Segoe UI, sans-serif" font-size="11">Lógica</text>
+  <circle cx="470" cy="192" r="5" fill="#f7971e" opacity="0.6"/>
+  <circle cx="490" cy="192" r="5" fill="#ffd200" opacity="0.6"/>
+  <circle cx="510" cy="192" r="5" fill="#0cebeb" opacity="0.6"/>
+  <!-- Título -->
+  <text x="300" y="38" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="18" font-weight="bold">¿Cómo funciona una API?</text>
+  <text x="300" y="280" text-anchor="middle" fill="#888" font-family="Segoe UI, sans-serif" font-size="11">Cliente → API → Servidor → API → Cliente</text>
+</svg>
