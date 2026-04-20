@@ -1,1 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo sobre APIs — Diseño de Portales Web</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==============================
+         HEADER CON NAVEGACIÓN
+    ============================== -->
+    <header>
+        <nav>
+            <a href="#" class="logo">&lt;/API<span>World</span>&gt;</a>
+            <ul>
+                <li><a href="#que-es">¿Qué es?</a></li>
+                <li><a href="#como-funciona">Funcionamiento</a></li>
+                <li><a href="#metodos">Métodos HTTP</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#json">JSON</a></li>
+                <li><a href="#ejemplo">Ejemplo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==============================
+         SECCIÓN HERO / BANNER
+    ============================== -->
+    <section class="hero">
+        <h1>Descubre el mundo de las <span>APIs</span></h1>
+        <p>
+            Las APIs son el puente invisible que conecta aplicaciones, servicios y datos 
+            en toda la web. Aprende cómo funcionan y por qué son esenciales en el 
+            desarrollo web moderno.
+        </p>
+        <!-- Botón que activa la alerta de JavaScript -->
+        <button class="btn-alerta" onclick="mostrarAlerta()">
+            ¡Haz clic para aprender!
+        </button>
+    </section>
+
+    <!-- ==============================
+         SECCIÓN: ¿QUÉ ES UNA API?
+    ============================== -->
+    <section id="que-es">
+        <h2>¿Qué es una API?</h2>
+        <p>
+            <strong>API</strong> significa <em>Application Programming Interface</em> 
+            (Interfaz de Programación de Aplicaciones). Es un conjunto de reglas y 
+            protocolos que permite que dos aplicaciones se comuniquen entre sí.
+        </p>
+        <p>
+            Imagina que estás en un restaurante: tú eres el <strong>cliente</strong>, 
+            la cocina es el <strong>servidor</strong>, y el mesero es la <strong>API</strong>. 
+            Tú le dices al mesero lo que quieres (petición), él va a la cocina, y te 
+            trae tu comida (respuesta). ¡Así de simple funciona una API!
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <span class="card-icon">🔗</span>
+                <h3>Conectividad</h3>
+                <p>Permite que diferentes aplicaciones y servicios se comuniquen sin importar el lenguaje en que fueron creadas.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">⚡</span>
+                <h3>Eficiencia</h3>
+                <p>Evita reinventar la rueda. ¿Necesitas mapas? Usa la API de Google Maps. ¿Clima? Usa OpenWeatherMap.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🔒</span>
+                <h3>Seguridad</h3>
+                <p>Las APIs exponen solo los datos necesarios, manteniendo protegida la lógica interna del servidor.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ==============================
+         SECCIÓN: CÓMO FUNCIONA
+    ============================== -->
+    <section id="como-funciona">
+        <h2>¿Cómo funciona una API?</h2>
+        <p>
+            El proceso se basa en un modelo de <strong>petición y respuesta</strong> 
+            (Request/Response). El cliente envía una solicitud HTTP al servidor a través 
+            de la API, y el servidor devuelve los datos solicitados, generalmente en 
+            formato JSON.
+        </p>
+
+        <!-- Imagen local desde la carpeta img -->
+        <div class="img-container">
+            <img src="img/api-concepto.svg" alt="Diagrama de cómo funciona una API: Cliente, API y Servidor">
+            <div class="img-caption">
+                Figura 1 — Flujo de comunicación: Cliente → API → Servidor → API → Cliente
+            </div>
+        </div>
+
+        <p>
+            Cada vez que usas una app de clima, inicias sesión con Google, o ves un 
+            mapa embebido en una página web, estás usando una API sin darte cuenta.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ==============================
+         SECCIÓN: MÉTODOS HTTP
+    ============================== -->
+    <section id="metodos">
+        <h2>Métodos HTTP en las APIs</h2>
+        <p>
+            Las APIs REST utilizan los métodos HTTP para indicar qué acción se desea 
+            realizar sobre un recurso. Los cuatro principales se conocen como 
+            <strong>CRUD</strong> (Crear, Leer, Actualizar, Eliminar).
+        </p>
+
+        <!-- Imagen local desde la carpeta img -->
+        <div class="img-container">
+            <img src="img/metodos-http.svg" alt="Los 4 métodos HTTP principales: GET, POST, PUT, DELETE">
+            <div class="img-caption">
+                Figura 2 — Los métodos HTTP: GET (leer), POST (crear), PUT (actualizar), DELETE (eliminar)
+            </div>
+        </div>
+
+        <!-- Tabla de métodos -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Acción</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>Obtener datos del servidor</td>
+                    <td>Ver la lista de estudiantes</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>Enviar datos nuevos al servidor</td>
+                    <td>Registrar un nuevo estudiante</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>Actualizar un recurso existente</td>
+                    <td>Cambiar el nombre de un estudiante</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>Eliminar un recurso</td>
+                    <td>Eliminar un estudiante de la lista</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ==============================
+         SECCIÓN: TIPOS DE APIs
+    ============================== -->
+    <section id="tipos">
+        <h2>Tipos de APIs</h2>
+        <p>
+            Existen diferentes arquitecturas y protocolos para construir APIs. Las más 
+            populares en la actualidad son REST, GraphQL y SOAP. Cada una tiene sus 
+            ventajas dependiendo del proyecto.
+        </p>
+
+        <!-- Imagen local desde la carpeta img -->
+        <div class="img-container">
+            <img src="img/tipos-apis.svg" alt="Comparativa de tipos de APIs: REST, GraphQL y SOAP">
+            <div class="img-caption">
+                Figura 3 — Comparativa de los tipos de APIs más utilizados en la industria
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <span class="card-icon">🌐</span>
+                <h3>APIs Públicas</h3>
+                <p>Disponibles para cualquier desarrollador. Ejemplo: la API de Twitter, PokéAPI, o NASA.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🏢</span>
+                <h3>APIs Privadas</h3>
+                <p>Solo para uso interno de una organización. Conectan los sistemas internos de la empresa.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🤝</span>
+                <h3>APIs de Socios</h3>
+                <p>Compartidas entre empresas aliadas. Ejemplo: pasarelas de pago como PayPal o Stripe.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ==============================
+         SECCIÓN: JSON
+    ============================== -->
+    <section id="json">
+        <h2>Formato JSON</h2>
+        <p>
+            <strong>JSON</strong> (JavaScript Object Notation) es el formato estándar 
+            que usan las APIs para enviar y recibir datos. Es ligero, fácil de leer 
+            tanto para humanos como para máquinas.
+        </p>
+
+        <!-- Imagen local desde la carpeta img -->
+        <div class="img-container">
+            <img src="img/json-ejemplo.svg" alt="Ejemplo de respuesta JSON de una API">
+            <div class="img-caption">
+                Figura 4 — Ejemplo de una respuesta JSON típica devuelta por una API
+            </div>
+        </div>
+
+        <p>
+            Un objeto JSON se compone de pares <strong>clave : valor</strong> encerrados 
+            entre llaves <code>{ }</code>. Los valores pueden ser textos, números, 
+            booleanos, arreglos u otros objetos.
+        </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ==============================
+         SECCIÓN: EJEMPLO PRÁCTICO
+    ============================== -->
+    <section id="ejemplo">
+        <h2>Ejemplo práctico con JavaScript</h2>
+        <p>
+            Aquí tienes un ejemplo real de cómo consumir una API usando 
+            <strong>fetch()</strong> en JavaScript. Este código obtiene datos de la 
+            API pública JSONPlaceholder:
+        </p>
+
+        <div class="codigo">
+            <code>
+                <span class="comment">// Consumir una API con fetch()</span><br>
+                <span class="function">fetch</span>(<span class="url">'https://jsonplaceholder.typicode.com/users/1'</span>)<br>
+                &nbsp;&nbsp;.<span class="function">then</span>(<span class="keyword">response</span> => response.<span class="function">json</span>())<br>
+                &nbsp;&nbsp;.<span class="function">then</span>(<span class="keyword">data</span> => {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">console.log</span>(<span class="string">'Nombre:'</span>, <span class="keyword">data</span>.name);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">console.log</span>(<span class="string">'Email:'</span>, <span class="keyword">data</span>.email);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">console.log</span>(<span class="string">'Ciudad:'</span>, <span class="keyword">data</span>.address.city);<br>
+                &nbsp;&nbsp;})<br>
+                &nbsp;&nbsp;.<span class="function">catch</span>(<span class="keyword">error</span> => {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">console.error</span>(<span class="string">'Error:'</span>, <span class="keyword">error</span>);<br>
+                &nbsp;&nbsp;});
+            </code>
+        </div>
+
+        <p>
+            Este código envía una petición <strong>GET</strong> a la API, recibe los 
+            datos en formato JSON y los muestra en la consola del navegador. Puedes 
+            probarlo en <strong>CodePen</strong> o en la consola de tu navegador.
+        </p>
+    </section>
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <footer>
+        <p>
+            Módulo INCO-MF034_3 — Diseño de Portales Web y Recursos Multimedia — 4to E<br>
+            Politécnico MIR Esperanza &bull; Profesor: Cristian Medina &bull; 2025–2026
+        </p>
+        <p style="margin-top: 10px;">
+            Practica en: <a href="https://www.codedex.io" target="_blank">Codedex</a> | 
+            <a href="https://codepen.io" target="_blank">CodePen</a>
+        </p>
+    </footer>
+
+    <!-- ==============================
+         JAVASCRIPT — ALERTA
+    ============================== -->
+    <script>
+        // =============================================
+        // FUNCIÓN: mostrarAlerta()
+        // Muestra una alerta educativa sobre APIs
+        // =============================================
+        function mostrarAlerta() {
+            alert(
+                "🌐 ¡Bienvenido al mundo de las APIs!\n\n" +
+                "📌 ¿Qué es una API?\n" +
+                "Es una Interfaz de Programación de Aplicaciones.\n" +
+                "Permite que dos sistemas se comuniquen entre sí.\n\n" +
+                "📌 Ejemplo cotidiano:\n" +
+                "Cuando usas Instagram y compartes una foto en Facebook,\n" +
+                "ambas apps se conectan mediante una API.\n\n" +
+                "📌 Métodos principales:\n" +
+                "• GET → Obtener datos\n" +
+                "• POST → Crear datos nuevos\n" +
+                "• PUT → Actualizar datos\n" +
+                "• DELETE → Eliminar datos\n\n" +
+                "📌 Formato de datos: JSON\n" +
+                '{ "nombre": "Ana", "edad": 17 }\n\n' +
+                "¡Sigue explorando el sitio para aprender más! 🚀"
+            );
+        }
+
+        // =============================================
+        // Alerta automática al cargar la página
+        // =============================================
+        window.onload = function() {
+            alert(
+                "👋 ¡Hola, estudiante de 4to E!\n\n" +
+                "Bienvenido a este sitio web sobre APIs.\n\n" +
+                "Aquí aprenderás:\n" +
+                "✅ Qué es una API\n" +
+                "✅ Cómo funciona (Request / Response)\n" +
+                "✅ Los métodos HTTP (GET, POST, PUT, DELETE)\n" +
+                "✅ El formato JSON\n" +
+                "✅ Un ejemplo práctico con JavaScript\n\n" +
+                "¡Haz clic en OK para comenzar! 🚀"
+            );
+        };
+    </script>
+
+</body>
+</html>
 
