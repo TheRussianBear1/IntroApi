@@ -1,1 +1,366 @@
+/* ============================================
+   SITIO WEB SOBRE APIs
+   Módulo INCO-MF034_3 — 4to E
+   Politécnico MIR Esperanza
+   ============================================ */
 
+/* === RESET Y BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a1a;
+  color: #e0e0e0;
+  line-height: 1.7;
+}
+
+/* === HEADER Y NAVEGACIÓN === */
+header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 210, 255, 0.15);
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #00d2ff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #e94560;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95em;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 210, 255, 0.15);
+  color: #00d2ff;
+}
+
+/* === HERO / BANNER === */
+.hero {
+  text-align: center;
+  padding: 80px 30px;
+  background: radial-gradient(ellipse at top, #1a1a3e 0%, #0a0a1a 70%);
+}
+
+.hero h1 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
+}
+
+.hero h1 span {
+  color: #00d2ff;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #aaa;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.btn-alerta {
+  display: inline-block;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #e94560, #c62a40);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.btn-alerta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(233, 69, 96, 0.5);
+}
+
+.btn-alerta:active {
+  transform: translateY(0);
+}
+
+/* === SECCIONES GENERALES === */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 30px;
+}
+
+section h2 {
+  font-size: 2em;
+  color: #00d2ff;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e94560;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+section p {
+  font-size: 1.05em;
+  color: #bbb;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+/* === IMÁGENES === */
+.img-container {
+  margin: 30px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 40px rgba(0, 210, 255, 0.15);
+}
+
+.img-container img {
+  width: 100%;
+  display: block;
+}
+
+.img-caption {
+  background-color: #111;
+  padding: 12px 20px;
+  font-size: 0.9em;
+  color: #888;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+/* === TARJETAS DE CONTENIDO === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: linear-gradient(145deg, #12122a, #1a1a35);
+  border: 1px solid #252545;
+  border-radius: 14px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #00d2ff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+}
+
+.card h3 {
+  color: #e94560;
+  font-size: 1.25em;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #999;
+  font-size: 0.95em;
+}
+
+.card-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* === BLOQUE DE CÓDIGO === */
+.codigo {
+  background-color: #0d0d1e;
+  border: 1px solid #2a2a4a;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 25px 0;
+  overflow-x: auto;
+}
+
+.codigo code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  color: #69f0ae;
+  line-height: 1.9;
+}
+
+.codigo .keyword {
+  color: #c792ea;
+}
+
+.codigo .string {
+  color: #c3e88d;
+}
+
+.codigo .comment {
+  color: #546e7a;
+}
+
+.codigo .function {
+  color: #82aaff;
+}
+
+.codigo .url {
+  color: #f78c6c;
+}
+
+/* === TABLA === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(135deg, #1a1a3e, #252555);
+}
+
+thead th {
+  padding: 15px 20px;
+  text-align: left;
+  color: #00d2ff;
+  font-weight: 600;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #1a1a35;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 210, 255, 0.05);
+}
+
+tbody td {
+  padding: 14px 20px;
+  color: #bbb;
+  font-size: 0.93em;
+}
+
+tbody td:first-child {
+  color: #e94560;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+/* === SEPARADOR === */
+.divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #2c5364, transparent);
+  margin: 20px 0;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #0f2027, #203a43);
+  border-top: 1px solid #1a3040;
+  margin-top: 50px;
+}
+
+footer p {
+  color: #666;
+  font-size: 0.9em;
+  max-width: 100%;
+}
+
+footer a {
+  color: #00d2ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  section h2 {
+    font-size: 1.5em;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
